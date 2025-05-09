@@ -90,7 +90,7 @@ body {
     display: inline-block;
     font-size: 1rem; /* 16px */
     padding: 0.75rem 1.5rem;
-    background: #0073e6;
+    background: #fd7000;
     color: white;
     border-radius: 4px;
     margin-top: 16px;
@@ -193,11 +193,11 @@ body {
 }
 
 .quick-item.call {
-  background: #28a745;
+  background: #fd7000;
 }
 
 .quick-item.talk {
-  background: #03c75a;
+  background:orangered;
   border-left: 1px solid rgba(255, 255, 255, 0.3); /* 가운데 선 */
 }
 
@@ -294,7 +294,7 @@ body {
   margin: 0 -6px;
   border-left: 24px solid transparent;
   border-right: 24px solid transparent;
-  border-bottom: 43.2px solid #fd7000;
+  border-bottom: 58.6px solid #fd7000;
   animation: blink 1s infinite;
   filter: drop-shadow(0 0 28.8px #fd7000);
 }
@@ -338,13 +338,15 @@ body {
   
 /* Contact Page Styles */
 .contact-section{
+  padding: 5rem;
   background-image: url(../images/contact_bg.jpg);
+  background-size: cover;
 }
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  margin: auto;
+  margin: 3rem auto;
 }
 
 .contact-card {
@@ -402,6 +404,7 @@ body {
 }
 
 .info-item {
+  cursor: none;
   display: flex;
   gap: 1rem;
   align-items: center;
