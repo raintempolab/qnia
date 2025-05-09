@@ -260,7 +260,7 @@ body {
 .maybe-section {
   background: #090707;
   width: 100vw;
-  height: 100vh;
+  height: 88vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -270,8 +270,12 @@ body {
 .maybe-section h1,
 .maybe-section p {
   color: white;
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
   text-align: center;
+}
+
+.loader{
+  margin-top: 80px;
 }
 
 .dank-ass-loader {
@@ -288,11 +292,11 @@ body {
   width: 0;
   height: 0;
   margin: 0 -6px;
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
-  border-bottom: 21.6px solid #fd7000;
+  border-left: 24px solid transparent;
+  border-right: 24px solid transparent;
+  border-bottom: 43.2px solid #fd7000;
   animation: blink 1s infinite;
-  filter: drop-shadow(0 0 18px #fd7000);
+  filter: drop-shadow(0 0 28.8px #fd7000);
 }
 
 .arrow.down {
@@ -333,11 +337,14 @@ body {
 }
   
 /* Contact Page Styles */
+.contact-section{
+  background-image: url(../images/contact_bg.jpg);
+}
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  margin-top: 2rem;
+  margin: auto;
 }
 
 .contact-card {
