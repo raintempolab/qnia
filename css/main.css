@@ -21,24 +21,42 @@ body {
     margin: 0 auto;
     padding: 0 16px;
   }
+
+  .header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   
   .qnia-header {
     background: #fff;
     border-bottom: 1px solid #eee;
     padding: 16px 0;
   }
-  
+
   .qnia-header .logo {
-    font-size: 1.5rem; /* 24px */
-    height: 60px;
-    width: auto;
-    margin-bottom: 8px;
+    height: 40px;
+    object-fit: contain;
   }
   
   .qnia-header .nav {
     display: flex;
-    gap: 24px;
-    margin-top: 8px;
+    gap: 1.5rem;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .qnia-header .nav a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    padding: 0.5rem 0;
+  }
+
+  .qnia-header .nav a:hover{
+    color: #fd7000;
+    transition: all 0.3s;
+    font-weight: 600;
   }
   
   .qnia-footer {
@@ -194,7 +212,7 @@ body {
     .qnia-header .nav {
       flex-direction: column;
       align-items: flex-start;
-      ggap: 0.75rem; /* 12px */
+      gap: 0.75rem; /* 12px */
       margin-top: 0.75rem;
     }
   
@@ -238,66 +256,81 @@ body {
   }
   
 
-/* loader */
-
-.maybe-section{
-  background:  #090707;
-}
-
-.maybe-section h1,p{
-  color: white;
-}
-.loader {
-  width: 100%;
-  height: 100%;
+/* maybe/loader */
+.maybe-section {
+  background: #090707;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.maybe-section h1,
+.maybe-section p {
+  color: white;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .dank-ass-loader {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
-  .row {
-     display: flex;
-  }
+}
+
+.dank-ass-loader .row {
+  display: flex;
 }
 
 .arrow {
-  width: 0; 
+  width: 0;
   height: 0;
-  margin: 0 (-12px / 2);
+  margin: 0 -6px;
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
-  border-bottom: (12px * 1.8) solid $color;
+  border-bottom: 21.6px solid #fd7000;
   animation: blink 1s infinite;
-  filter: drop-shadow(0 0 (12px * 1.5) $color);
-   
-  &.down {
-     transform: rotate(180deg);
-  }
-  
-  @for $i from 1 through 18 {
-     &.outer-#{$i} {
-        animation-delay: -(1 / 18) * $i + s;
-     }  
-  }
-
-  @for $i from 1 through 6 {
-     &.inner-#{$i} {
-        animation-delay: -(1 / 6) * $i + s;
-     }  
-  }  
+  filter: drop-shadow(0 0 18px #fd7000);
 }
+
+.arrow.down {
+  transform: rotate(180deg);
+}
+
+/* animation delays */
+.outer-1 { animation-delay: -0.06s; }
+.outer-2 { animation-delay: -0.12s; }
+.outer-3 { animation-delay: -0.18s; }
+.outer-4 { animation-delay: -0.24s; }
+.outer-5 { animation-delay: -0.30s; }
+.outer-6 { animation-delay: -0.36s; }
+.outer-7 { animation-delay: -0.42s; }
+.outer-8 { animation-delay: -0.48s; }
+.outer-9 { animation-delay: -0.54s; }
+.outer-10 { animation-delay: -0.60s; }
+.outer-11 { animation-delay: -0.66s; }
+.outer-12 { animation-delay: -0.72s; }
+.outer-13 { animation-delay: -0.78s; }
+.outer-14 { animation-delay: -0.84s; }
+.outer-15 { animation-delay: -0.90s; }
+.outer-16 { animation-delay: -0.96s; }
+.outer-17 { animation-delay: -1.02s; }
+.outer-18 { animation-delay: -1.08s; }
+
+.inner-1 { animation-delay: -0.16s; }
+.inner-2 { animation-delay: -0.33s; }
+.inner-3 { animation-delay: -0.5s; }
+.inner-4 { animation-delay: -0.66s; }
+.inner-5 { animation-delay: -0.83s; }
+.inner-6 { animation-delay: -1s; }
 
 @keyframes blink {
- 0% { opacity: 0.1; }
- 30% { opacity: 1; }
- 100% { opacity: 0.1; }
+  0% { opacity: 0.1; }
+  30% { opacity: 1; }
+  100% { opacity: 0.1; }
 }
-
   
 /* Contact Page Styles */
 .contact-grid {
