@@ -441,12 +441,12 @@ body {
 /* hire 입점광고문의 섹션 */
 
 .hire-section{  
-  background-color:#f9f9f9;
+  background-color:#1c1c1c;
   }
   
   .hire-main-visual{
     margin: 0;
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
     color: white;
     font-size: 9px;
@@ -495,8 +495,7 @@ body {
     text-decoration: none;
   }
   
-  .logo {
+  .hire-main-visual .logo {
       width: 50px;
       height: 50px;
   }
-  
