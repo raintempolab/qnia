@@ -30,8 +30,9 @@ body {
   
   .qnia-header .logo {
     font-size: 1.5rem; /* 24px */
-    height: 70px;
+    height: 60px;
     width: auto;
+    margin-bottom: 8px;
   }
   
   .qnia-header .nav {
@@ -236,3 +237,159 @@ body {
     }
   }
   
+
+/* loader */
+
+.maybe-section{
+  background:  #090707;
+}
+
+.maybe-section h1,p{
+  color: white;
+}
+.loader {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dank-ass-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  .row {
+     display: flex;
+  }
+}
+
+.arrow {
+  width: 0; 
+  height: 0;
+  margin: 0 (-12px / 2);
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: (12px * 1.8) solid $color;
+  animation: blink 1s infinite;
+  filter: drop-shadow(0 0 (12px * 1.5) $color);
+   
+  &.down {
+     transform: rotate(180deg);
+  }
+  
+  @for $i from 1 through 18 {
+     &.outer-#{$i} {
+        animation-delay: -(1 / 18) * $i + s;
+     }  
+  }
+
+  @for $i from 1 through 6 {
+     &.inner-#{$i} {
+        animation-delay: -(1 / 6) * $i + s;
+     }  
+  }  
+}
+
+@keyframes blink {
+ 0% { opacity: 0.1; }
+ 30% { opacity: 1; }
+ 100% { opacity: 0.1; }
+}
+
+  
+/* Contact Page Styles */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+}
+
+.form-card h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.btn-primary.full {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.info-card .contact-visual {
+  width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: #fef8f2;
+  margin-bottom: 1rem;
+}
+
+.info-item .icon {
+  font-size: 1.5rem;
+  color: #f38020;
+}
+
+.info-item h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.info-item p {
+  margin: 0;
+  color: #555;
+}
+
+/* Responsive Contact Page */
+@media screen and (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}

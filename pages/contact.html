@@ -1,22 +1,47 @@
 
 <section class="contact-section">
-  <div class="container">
-    <h2>고객지원 / 문의하기</h2>
-    <form id="contact-form">
-      <div class="form-group">
-        <label for="name">이름</label>
-        <input type="text" id="name" name="name" required />
+  <div class="container contact-grid">
+    <!-- Left: Contact Form -->
+    <div class="contact-card form-card">
+      <h2>문의하기</h2>
+      <p>궁금한 점이 있으신가요? 아래에 내용을 남겨주시면 24시간 이내에 답변드릴게요.</p>
+      <form id="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">이메일</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">문의 내용</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary full">문의 보내기</button>
+      </form>
+      <div id="form-status" class="form-status"></div>
+    </div>
+
+    <!-- Right: Info Cards -->
+    <div class="contact-card info-card">
+      <img src="images/qnia-contact-visual.jpg" alt="contact image" class="contact-visual" />
+      <div class="info-item">
+        <span class="icon">📧</span>
+        <div>
+          <h4>이메일</h4>
+          <p>hello@qnia.kr</p>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="email">이메일</label>
-        <input type="email" id="email" name="email" required />
+      <div class="info-item">
+        <span class="icon">📞</span>
+        <div>
+          <h4>전화</h4>
+          <p>010-3650-6104</p>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="message">문의 내용</label>
-        <textarea id="message" name="message" rows="6" required></textarea>
-      </div>
-      <button type="submit" class="btn-primary">문의 보내기</button>
-    </form>
-    <div id="form-status" class="form-status"></div>
+    </div>
   </div>
 </section>
