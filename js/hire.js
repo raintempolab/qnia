@@ -96,14 +96,14 @@ const preload = () => {
           this.buttom = false;
   
           this.data = {
-    text: '가게 주방\n든든하게 지켜드릴게요',
-    amount: 1500,
-    particleSize: 1,
-    particleColor: 0xfd7000,   // 큐니아 오렌지
-    textSize: 16,
-    area: 250,
-    ease: .05,
-  }
+            text: 'K-Restorant\nBussiness-PARTNER',
+            amount: 1500,
+            particleSize: 1,
+            particleColor: 0xfd7000,   // 큐니아 오렌지
+            textSize: 60,
+            area: 250,
+            ease: .05,
+          }
   
           this.setup();
           this.bindEvents();
