@@ -437,6 +437,50 @@ body {
   }
 }
 
+/* thanks 페이지 */
+.thanks-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 2rem;
+  background-color: #fffaf3;
+  text-align: center;
+}
+
+.thanks-container {
+  max-width: 600px;
+  padding: 3rem 2rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
+}
+
+.thanks-container h1 {
+  font-size: 1.75rem;
+  color: #fd7000;
+  margin-bottom: 1rem;
+}
+
+.thanks-container p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  background: #fd7000;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #e23f00;
+}
 
 /* hire 입점광고문의 섹션 */
 
