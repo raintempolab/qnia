@@ -21,7 +21,9 @@
         </div>
       </div>
       
-      <form id="contact-form">
+     <form name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact" />
+        
         <div class="form-row">
           <div class="form-group">
             <label for="name">이름</label>
@@ -37,7 +39,7 @@
           <textarea id="message" name="message" rows="6" required></textarea>
         </div>
         <button type="submit" class="btn-primary full">문의 보내기</button>
-      </form>
+        </form>
       <div id="form-status" class="form-status"></div>
     </div>
 
