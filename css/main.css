@@ -441,14 +441,14 @@ body {
 /* hire 입점광고문의 섹션 */
 
 .hire-section{  
-  background-color:#1c1c1c;
+  background-colorlinear-gradient(to right, #E23F00 0%, #FF6F00 30%, #FF8500 45%, #FFC500 60%, #ffffff 80%);
   }
   
   .hire-main-visual{
     margin: 0 auto;
     height: 100vh;
     overflow: hidden;
-    color: white;
+    color: #1c1c1c;
     font-size: 9px;
   }
   
