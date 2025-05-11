@@ -441,7 +441,7 @@ body {
 /* hire 입점광고문의 섹션 */
 
 .hire-section{  
-  background-colorlinear-gradient(to right, #E23F00 0%, #FF6F00 30%, #FF8500 45%, #FFC500 60%, #ffffff 80%);
+  background-color: linear-gradient(to right, #E23F00 0%, #FF6F00 30%, #FF8500 45%, #FFC500 60%, #ffffff 80%);
   }
   
   .hire-main-visual{
