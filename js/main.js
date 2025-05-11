@@ -15,8 +15,7 @@ async function loadPage(page = 'home') {
   app.innerHTML = header + content + footer;
 
   // 각종 이벤트 리스너 등록
-  addNavEventListeners();        // 헤더 메뉴 클릭 → SPA 전환
-  addContactFormListener();      // contact.html 안에 폼이 있다면 → submit 이벤트 등록
+  addNavEventListeners(); // 헤더 메뉴 클릭 → SPA 전환
 }
 
 // 네비게이션 링크 이벤트 연결
@@ -29,46 +28,6 @@ function addNavEventListeners() {
       loadPage(targetPage);
       window.scrollTo(0, 0);
     };
-  });
-}
-
-// contact-form 전송 이벤트 연결
-function addContactFormListener() {
-  const form = document.getElementById("contact-form");
-  if (!form) return;
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const formData = {
-      name: form.name.value,
-      email: form.email.value,
-      message: form.message.value,
-    };
-
-    try {
-      const res = await fetch("/.netlify/functions/sendmail", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const result = await res.json();
-      const statusDiv = document.getElementById("form-status");
-
-      if (res.ok) {
-        statusDiv.textContent = "메일이 전송되었습니다. 감사합니다!";
-        form.reset();
-      } else {
-        statusDiv.textContent = "메일 전송 실패: " + result.error;
-      }
-    } catch (err) {
-      console.error("SMTP 요청 오류:", err);
-      const statusDiv = document.getElementById("form-status");
-      statusDiv.textContent = "메일 전송 중 오류가 발생했습니다.";
-    }
   });
 }
 
